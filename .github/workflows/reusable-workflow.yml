@@ -8,13 +8,6 @@ on:
         type: string
 
 jobs:
-  call_reuseable_workflow:
-    strategy:
-      matrix:
-        nodeversion: [14, 16, 18, 20]
-    uses: ./.github/workflows/reusable-workflow.yml
-    with:
-      node: ${{ matrix.nodeversion }}
       
   build:
     runs-on: ubuntu-latest
